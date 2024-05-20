@@ -1,0 +1,46 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f8f9fa;
+    padding: 1em;
+}
+nav a {
+    margin: 0 1em;
+    text-decoration: none;
+    color: #007bff;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+#mainContent {
+    padding: 20px;
+}
+.sidebar {
+    width: 20%;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+.sidebar-item {
+    padding: 10px;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+.sidebar-item:hover {
+    background-color: #ddd;
+}
+.main-content {
+    margin-left: 22%;
+    padding: 20px;
+}
+.posts-section {
+    margin: 20px 0;
+}
+.rss-post {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}

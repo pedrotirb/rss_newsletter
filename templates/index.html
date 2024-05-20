@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSS Aggregator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav>
+        <a href="#" id="homeLink">Home</a>
+        <a href="#" id="bookmarksLink">Bookmarks</a>
+        <a href="#" id="sharingLink">Sharing</a>
+        <a href="#" id="newsletterLink">Newsletter</a>
+    </nav>
+    <aside class="sidebar">
+        <div class="sidebar-section">
+            <h2>Feeds</h2>
+            <ul id="sidebar-feeds-list">
+                <li><a href="#" id="sidebar-all-feeds">All Feeds</a></li>
+                <!-- Dynamically add feeds here -->
+            </ul>
+        </div>
+        <div class="sidebar-section">
+            <h2>Bookmarks</h2>
+            <ul id="sidebar-bookmarks-list">
+                <!-- Dynamically add bookmarks here -->
+            </ul>
+        </div>
+        <div class="sidebar-section">
+            <h2>Sharing</h2>
+            <ul id="sidebar-sharing-list">
+                <!-- Dynamically add shared posts here -->
+            </ul>
+        </div>
+        <div class="sidebar-section">
+            <h2>Newsletter</h2>
+            <a href="#" id="create-newsletter">Create Newsletter</a>
+        </div>
+    </aside>
+    <main id="mainContent">
+        <!-- Main content sections (feeds, posts, bookmarks, etc.) -->
+    </main>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
