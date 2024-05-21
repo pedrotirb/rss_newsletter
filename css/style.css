@@ -43,7 +43,7 @@ nav {
     backdrop-filter: var(--backdrop-filter);
     box-shadow: var(--box-shadow);
     transition: all var(--transition-duration) var(--transition-timing-function);
-    margin: 1em 0.5em;
+    margin: 1em 0.2em 1em 0.5em;
     border-radius: var(--border-radius);
     background: var(--nav-background);
 }
@@ -54,14 +54,13 @@ aside {
     justify-content: center;
     align-items: center;
     position: fixed;
-    top: 0;
-    left: calc(var(--nav-width) + 0.5em);
+    margin: 1em 0.5em 1em 0.2em;
+    left: calc(var(--nav-width) + 1em);
     height: var(--nav-height);
     width: var(--aside-width);
     backdrop-filter: var(--backdrop-filter);
     box-shadow: var(--box-shadow);
     transition: all var(--transition-duration) var(--transition-timing-function);
-    margin: 1em 0.5em;
     border-radius: var(--border-radius);
     background: var(--nav-background);
 }
@@ -80,10 +79,17 @@ nav ul li, aside ul li {
     margin: 1em 0;
 }
 
+nav ul li a, nav ul li a i {
+    font-size: 32px;
+}
+
+aside ul li a, aside ul li a i{
+    font-size: 18px;
+}
+
 nav ul li a, nav ul li a i, aside ul li a, aside ul li a i {
     text-decoration: none;
     color: var(--text-color);
-    font-size: 32px;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -108,23 +114,10 @@ nav ul li a:active i, aside ul li a:active i {
     box-shadow: var(--active-box-shadow);
 }
 
-#sidebar {
-    width: 200px;
-    background: rgba(255, 255, 255, 0.8);
-    padding: 10px;
-    margin-top: 60px;
-    flex-shrink: 0;
-    overflow-y: auto;
-    backdrop-filter: var(--backdrop-filter);
-    box-shadow: var(--box-shadow);
-    border-radius: var(--border-radius);
-    transition: all var(--transition-duration) var(--transition-timing-function);
-}
-
 #main-content {
     flex-grow: 1;
     padding: 20px;
-    margin-left: calc(var(--nav-width) + var(--aside-width) + 1em);
+    margin-left: calc(var(--nav-width) + var(--aside-width) + 2em);
     margin-top: 60px;
     transition: all var(--transition-duration) var(--transition-timing-function);
 }
