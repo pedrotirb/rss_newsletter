@@ -3,44 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RSS Aggregator</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>RSS Feed Reader</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
-    <nav>
-        <a href="#" id="homeLink">Home</a>
-        <a href="#" id="bookmarksLink">Bookmarks</a>
-        <a href="#" id="sharingLink">Sharing</a>
-        <a href="#" id="newsletterLink">Newsletter</a>
+    <nav class="main-nav" aria-label="Main navigation">
+        <ul class="main-nav-list">
+            <li><a href="#main-area" aria-label="Main Area"><i class="bi bi-rss"></i></a></li>
+            <div class="main-nav-list-areas">
+                <li><a href="#search-area" aria-label="Search Area"><i class="bi bi-search"></i></a></li>
+                <li><a href="#posts-area" aria-label="Posts Area"><i class="bi bi-newspaper"></i></a></li>
+                <li><a href="#newsletter-area" aria-label="Newsletter Area"><i class="bi bi-file-earmark-richtext"></i></a></li>
+            </div>
+            <li><a href="#profile-area" aria-label="Profile Area"><i class="bi bi-person-circle"></i></a></li>
+        </ul>
     </nav>
-    <aside class="sidebar">
-        <div class="sidebar-section">
-            <h2>Feeds</h2>
-            <ul id="sidebar-feeds-list">
-                <li><a href="#" id="sidebar-all-feeds">All Feeds</a></li>
-                <!-- Dynamically add feeds here -->
-            </ul>
+    <!-- <aside id="sidebar" aria-label="Sidebar"></aside> -->
+    <main id="main-content" role="main"></main>
+
+    <!-- Sidebar Content -->
+    <div id="main-sidebar" style="display: none;">
+        <ul>
+            <li><button aria-label="Today">Today</button></li>
+            <li><button aria-label="Bookmarks">Bookmarks</button></li>
+            <li><button aria-label="Read Later">Read Later</button></li>
+            <li>Feeds
+                <ul>
+                    <li><button aria-label="All Feeds">All Feeds</button></li>
+                    <li><button aria-label="Feed One">Feed One</button></li>
+                    <li><button aria-label="Feed Two">Feed Two</button></li>
+                    <li><button aria-label="Feed Three">Feed Three</button></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div id="search-sidebar" style="display: none;">
+        <input type="text" id="url-input" placeholder="Enter URL" aria-label="Enter URL">
+        <button id="search-btn" aria-label="Search">Search</button>
+    </div>
+
+    <div id="newsletter-sidebar" style="display: none;">
+        <button id="select-btn" aria-label="Select Posts">Select</button>
+        <button id="edit-btn" aria-label="Edit Newsletter">Edit</button>
+        <button id="send-btn" aria-label="Send Newsletter">Send</button>
+        <div id="history" aria-label="Newsletter History">History</div>
+    </div>
+
+    <!-- Main Content -->
+    <div id="posts-content" style="display: none;">
+        <div class="view-options">
+            <button class="view-btn" data-view="cards" aria-label="Cards View">Cards</button>
+            <button class="view-btn" data-view="stack" aria-label="Stack View">Stack</button>
+            <button class="view-btn" data-view="list" aria-label="List View">List</button>
         </div>
-        <div class="sidebar-section">
-            <h2>Bookmarks</h2>
-            <ul id="sidebar-bookmarks-list">
-                <!-- Dynamically add bookmarks here -->
-            </ul>
+        <div id="posts-view"></div>
+    </div>
+
+    <div id="search-content" style="display: none;">
+        <div id="feeds-found"></div>
+    </div>
+
+    <div id="newsletter-content" style="display: none;">
+        <div id="editor-toolbar" role="toolbar" aria-label="Text Editing Toolbar">
+            <button class="toolbar-btn" data-command="bold" aria-label="Bold Text">B</button>
+            <button class="toolbar-btn" data-command="italic" aria-label="Italic Text">I</button>
+            <button class="toolbar-btn" data-command="underline" aria-label="Underline Text">U</button>
+            <!-- Add other toolbar buttons as needed -->
         </div>
-        <div class="sidebar-section">
-            <h2>Sharing</h2>
-            <ul id="sidebar-sharing-list">
-                <!-- Dynamically add shared posts here -->
-            </ul>
+        <div id="newsletter-editor">
+            <textarea id="newsletter-header" placeholder="Header" aria-label="Newsletter Header"></textarea>
+            <div id="selected-posts"></div>
+            <textarea id="newsletter-footer" placeholder="Footer" aria-label="Newsletter Footer"></textarea>
         </div>
-        <div class="sidebar-section">
-            <h2>Newsletter</h2>
-            <a href="#" id="create-newsletter">Create Newsletter</a>
-        </div>
-    </aside>
-    <main id="mainContent">
-        <!-- Main content sections (feeds, posts, bookmarks, etc.) -->
-    </main>
-    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- <script src="script.js"></script> -->
 </body>
 </html>
