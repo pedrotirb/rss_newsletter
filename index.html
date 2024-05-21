@@ -19,39 +19,41 @@
             <li><a href="#profile-area" aria-label="Profile Area"><i class="bi bi-person-circle"></i></a></li>
         </ul>
     </nav>
-    <!-- <aside id="sidebar" aria-label="Sidebar"></aside> -->
-    <main id="main-content" role="main"></main>
 
     <!-- Sidebar Content -->
-    <div id="main-sidebar" style="display: none;">
+    <aside class="sidebar" id="sidebar" aria-label="Sidebar">
         <ul>
-            <li><button aria-label="Today">Today</button></li>
-            <li><button aria-label="Bookmarks">Bookmarks</button></li>
-            <li><button aria-label="Read Later">Read Later</button></li>
+            <li><a href="#today" aria-label="Today"><i class="bi bi-calendar3"></i>Today</a></li>
+            <li><a href="#bookmarks" aria-label="Bookmarks"><i class="bi bi-bookmarks"></i>Bookmarks</a></li>
+            <li><a href="#readlater" aria-label="Read Later"><i class="bi bi-eyeglasses"></i>Read Later</a></li>
             <li>Feeds
                 <ul>
-                    <li><button aria-label="All Feeds">All Feeds</button></li>
+                    <li><a href="#all-feeds" aria-label="All Feeds"><i class="bi bi-file-earmark-post"></i>All Feeds</a></li>
                     <li><button aria-label="Feed One">Feed One</button></li>
                     <li><button aria-label="Feed Two">Feed Two</button></li>
                     <li><button aria-label="Feed Three">Feed Three</button></li>
                 </ul>
             </li>
         </ul>
-    </div>
-
-    <div id="search-sidebar" style="display: none;">
+        
+    <!-- <div id="search-sidebar" style="display: none;">
         <input type="text" id="url-input" placeholder="Enter URL" aria-label="Enter URL">
         <button id="search-btn" aria-label="Search">Search</button>
-    </div>
+    </div> -->
 
-    <div id="newsletter-sidebar" style="display: none;">
+    <!-- <div id="newsletter-sidebar" style="display: none;">
         <button id="select-btn" aria-label="Select Posts">Select</button>
         <button id="edit-btn" aria-label="Edit Newsletter">Edit</button>
         <button id="send-btn" aria-label="Send Newsletter">Send</button>
         <div id="history" aria-label="Newsletter History">History</div>
-    </div>
+    </div> -->
 
-    <!-- Main Content -->
+    </aside>
+
+
+    <main id="main-content" role="main">
+
+    <!-- Main Content 
     <div id="posts-content" style="display: none;">
         <div class="view-options">
             <button class="view-btn" data-view="cards" aria-label="Cards View">Cards</button>
@@ -70,14 +72,16 @@
             <button class="toolbar-btn" data-command="bold" aria-label="Bold Text">B</button>
             <button class="toolbar-btn" data-command="italic" aria-label="Italic Text">I</button>
             <button class="toolbar-btn" data-command="underline" aria-label="Underline Text">U</button>
-            <!-- Add other toolbar buttons as needed -->
+
         </div>
         <div id="newsletter-editor">
             <textarea id="newsletter-header" placeholder="Header" aria-label="Newsletter Header"></textarea>
             <div id="selected-posts"></div>
             <textarea id="newsletter-footer" placeholder="Footer" aria-label="Newsletter Footer"></textarea>
         </div>
-    </div>
+    </div> -->
+    </main>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <!-- <script src="script.js"></script> -->
 </body>
