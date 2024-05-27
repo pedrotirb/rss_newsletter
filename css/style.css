@@ -12,7 +12,7 @@
     --backdrop-filter: blur(10px);
     --nav-height: 96vh;
     --nav-width: 5vw;
-    --aside-width: 10vw;
+    --aside-width: 15vw;
     --nav-background: rgba(240, 240, 240, 0.4);
     --hover-box-shadow: 0 0 16px rgba(0, 0, 0, 0.4);
     --active-box-shadow: 0 -2px -5px rgba(0, 0, 0, 0.5);
@@ -36,10 +36,10 @@ body {
     height: 100vh;
     width: 100vw;
     background: linear-gradient(
-    127deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(9, 9, 121, 1) 30%,
-    rgba(0, 212, 255, 1) 100%
+        127deg,
+        rgba(2, 0, 36, 1) 0%,
+        rgba(9, 9, 121, 1) 30%,
+        rgba(0, 212, 255, 1) 100%
     );
     color: var(--text-color);
     transition: all var(--transition-duration) var(--transition-timing-function);
@@ -130,12 +130,12 @@ aside ul li a:hover {
 nav ul li a:hover i,
 aside ul li a:hover i {
     font-weight: bolder;
-    transform: scale(1.4);
+    transform: scale(1);
 }
 
 nav ul li a:active i,
 aside ul li a:active i {
-    transform: scale(0.99);
+    transform: scale(0.9);
     box-shadow: var(--active-box-shadow);
 }
 
@@ -146,6 +146,7 @@ aside ul li a:active i {
     margin-top: 60px;
     transition: all var(--transition-duration) var(--transition-timing-function);
 }
+
 
 .view-options {
     display: flex;
