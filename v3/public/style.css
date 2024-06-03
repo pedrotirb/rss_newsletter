@@ -1,0 +1,17 @@
+/* styles.css */
+body {
+    display: flex;
+    margin: 0;
+    height: 100vh;
+}
+.sidebar {
+    width: 20%;
+    background-color: rgba(248, 249, 250, 80%);
+    padding: 1em;
+    box-sizing: border-box;
+}
+.content {
+    width: 80%;
+    padding: 1em;
+    box-sizing: border-box;
+}
