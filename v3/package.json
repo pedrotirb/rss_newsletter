@@ -2,7 +2,8 @@
   "dependencies": {
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "rss-parser": "^3.13.0"
   },
   "name": "rss-reader",
   "version": "1.0.0",
