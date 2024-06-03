@@ -1,0 +1,38 @@
+:root {
+    --main-bg-color: #f8f9fa;
+    --container-bg-color: #ffffff;
+    --container-border-color: #dee2e6;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--main-bg-color);
+}
+
+.login-container, .register-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    border: 1px solid var(--container-border-color);
+    border-radius: 10px;
+    background-color: var(--container-bg-color);
+}
+
+.social-login button, .social-login button {
+    width: 100%;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.social-login button:hover, .social-login button:hover {
+    background-color: #ddd;
+}
+
+@media (max-width: 500px) {
+    .login-container, .register-container {
+        width: 90%;
+    }
+}
